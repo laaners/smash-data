@@ -1,0 +1,115 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Smash Data</title>    
+        <link href="style?page=tier_list" rel="stylesheet">
+        <link href="style?page=modal" rel="stylesheet">
+        <!--JQUERY-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!--BOOTSTRAP 4.0-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!--overwrites ajax
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="navbar-brand" href="#" style="font-weight: bolder;">
+                <img src="/logo" width="30" height="30" class="d-inline-block align-top" alt="">
+                &ensp;Smash Data - Classifica
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pageNavbar" aria-controls="pageNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="pageNavbar">
+                <ul class="navbar-nav ml-auto" style="font-weight: bolder;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/stats">STATISTICHE</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/tier_list">CLASSIFICA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/search">CERCA PARTITA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/legenda">LEGENDA</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="tier-navigator">
+            <div class="loader"></div>
+        </div>
+        <div class="container-fluid text-center" id="list">
+            <div class="loader"></div>
+        </div>
+        <div class="tier-navigator">
+            <div class="loader"></div>
+        </div>
+        <hr style="border: 0.5px solid lightblue;">
+        <a name="calculation" style="text-align: center !important;">
+            <div>
+                I numeri rappresentano <b>#KO/#PARTITE</b><br>
+                Il personaggio che ha il punteggio più alto <b>(max)</b> è in S<br>
+                Il personaggio che ha il punteggio più basso <b>(min)</b> è in F<br>
+                Le sezioni sono <b>7</b> (S, A, B ... F)<br>
+                Le sezioni vengono divise equamente sottraendo dal punteggio pi&ugrave; alto <b>(max-min)/7</b> fino ad arrivare a min<br>
+                Quindi se max=3.2 e min = 1.1, <b>(max-min)/7=2.1/7=0.3</b> e <b>S = [3.2,2.9), A = [2.9,2.6) ... F = [1.4,1.1)</b><br>
+            </div>
+        </a>
+
+        <div id="modal-anchor">
+            <div class="modal fade popup" id="pg-modal" role="dialog">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                
+                    <div class="modal-content">
+    
+                        <div class="modal-header text-center">
+                            <div style="display: flex; align-items: center">
+                                <img src="pic_pg?pg=${characters.find(_=>_.character == pg).code}&type=stock0" alt="Immagine non ancora disponibile!">
+                                <h2><b>&ensp;${pg} di ${selectedPlayer}</b></h2>
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                
+                        <div class="modal-body" align="center">
+                            <div class="modal-body-container">
+                                <img class="modal-pg-pic" src="pic_pg?pg=${characters.find(_=>_.character == pg).code}&type=selected0-min" alt="Immagine non ancora disponibile!">
+                                <div class="modal-body-right">
+                                    ${peculiar}
+                                    ${usage}
+                                    ${win}
+                                    ${killsPar}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class ="mr-auto" id="tier"></div>
+                            <button type="button" class="btn btn-primary" id="modal-button-tot">Totale</button>
+                            <button type="button" class="btn btn-primary" id="modal-button-ale">Ale</button>
+                            <button type="button" class="btn btn-primary" id="modal-button-leo">Leo</button>
+                            <button type="button" class="btn btn-primary" id="modal-button-sandro">Sandro</button>
+                            <button type="button" class="btn btn-primary" id="modal-button-siwei">Siwei</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                        </div>       
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+        <script type="text/javascript" lang="javascript" src="script?page=tier_list"></script>
+        <script type="text/javascript" lang="javascript" src="script?page=modal"></script>
+  </body>
+</html>

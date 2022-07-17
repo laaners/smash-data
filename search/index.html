@@ -1,0 +1,185 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Smash Data</title>    
+        <link href="style?page=search" rel="stylesheet">
+        <!--JQUERY-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!--BOOTSTRAP 4.0-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!--overwrites ajax
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="navbar-brand" href="#" style="font-weight: bolder;">
+                <img src="/logo" width="30" height="30" class="d-inline-block align-top" alt="">
+                &ensp;Smash Data - Cerca Partita
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pageNavbar" aria-controls="pageNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="pageNavbar">
+                <ul class="navbar-nav ml-auto" style="font-weight: bolder;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/stats">STATISTICHE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tier_list">CLASSIFICA</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/search">CERCA PARTITA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/legenda">LEGENDA</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <form action="/query_video" method="get" name="main-form" enctype="multipart/form-data" target="dummyframe">
+            <br>
+            <!--        WIN     -->
+            <h3 id="win">
+                Vinctore-1:
+                <select name="win">
+                    <option value="True" selected="selected">Chiunque</option>
+                    <option value="Ale">Ale</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Sandro">Sandro</option>
+                    <option value="Siwei">Siwei</option>
+                </select>
+            </h3>
+            <p>(Se lasci "Chiunque" conta <b>anche</b> le partite Team, Vincitore-1 = "Chiunque", Vincitore-2 = "Nessuno" se si vuole <b>solo</b> le partite Single)</p>
+            <hr>
+            <!--        WIN1        -->
+            <h3>
+                Vinctore-2 (per le partite in Team):
+                <select name="win1">
+                    <option value="True" selected="selected">Chiunque</option>
+                    <option value="False">Nessuno</option>
+                    <option value="Ale">Ale</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Sandro">Sandro</option>
+                    <option value="Siwei">Siwei</option>
+                </select>
+            </h3>
+            <p>(Se lasci "Chiunque" conta <b>anche</b> le partite Single, Vincitore-1 = "Chiunque", Vincitore-2 = "Ale/Leo/Sandro/Siwei" se si vuole <b>solo</b> le partite Team dove vince "Ale/Leo/Sandro/Siwei")</p>
+            <hr>
+            <!--        KILLS       -->
+            <h3>
+                KO+ di
+                <select name="kills-uccide">
+                    <option value="True" selected="selected">Chiunque</option>
+                    <option value="Ale">Ale</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Sandro">Sandro</option>
+                    <option value="Siwei">Siwei</option>
+                </select>
+                contro
+                <select name="kills-ucciso">
+                    <option value="True" selected="selected">Chiunque</option>
+                    <option value="Ale">Ale</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Sandro">Sandro</option>
+                    <option value="Siwei">Siwei</option>
+                </select>
+                con
+            </h3>
+            <p style="display: flex; justify-content: center;">
+                Cerca come (premi invia):&ensp;<input type="text" maxlength="25" size="25" id="goto-kill" list="kill-code">
+            </p>
+            <datalist id="kill-code">
+                <option value="Qualunque">Qualunque</option>
+            </datalist>
+            <div id="kills">
+                <div class="kill">
+                    <img src="question" height=100 alt="PNG not found">
+                    <div>
+                        <input type="radio" name="kills-come" value="True" checked="checked" style="font-weight: bolder;">&ensp;Qualunque<br>
+                    </div>
+                </div>
+            </div>
+            <br><hr>
+            <!--        DEATHS      -->
+            <h3>
+                KO- di
+                <select name="deaths-chi">
+                    <option value="False" selected="selected">Nessuno</option>
+                    <option value="True">Chiunque</option>
+                    <option value="Ale">Ale</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Sandro">Sandro</option>
+                    <option value="Siwei">Siwei</option>
+                </select>
+                a causa di
+            </h3>
+            <p>(Cambiare "Nessuno" se la causa non è "Qualunque")</p>
+            <p style="display: flex; justify-content: center;">
+                Cerca come (premi invia):&ensp;<input type="text" maxlength="25" size="25" id="goto-death" list="death-code">
+            </p>
+            <datalist id="death-code">
+                <option value="Qualunque">Qualunque</option>
+            </datalist>
+            <div id="deaths">
+                <div class="death">
+                    <img src="question" height=100 alt="PNG not found">
+                    <div>
+                        <input type="radio" name="deaths-come" value="True" checked="checked" style="font-weight: bolder;">&ensp;Qualunque<br>
+                    </div>
+                </div>
+            </div>
+            <br><hr>
+            <!--        USE     -->
+            <h3>Personaggi usati</h3>
+            <p style="display: flex; justify-content: center;">
+                Cerca personaggio (premi invia):&ensp;<input type="text" maxlength="25" size="25" id="goto-pg" list="pg-code">
+            </p>
+            <datalist id="pg-code">
+                <option value="Chiunque">Chiunque</option>
+            </datalist>
+            <div id="use">
+                <div class="pg">
+                    <div class="pg-left">
+                        <img src="logo" height=100 alt="PNG not found">
+                        <p style="font-weight: bolder;">Chiunque</p>
+                    </div>
+                    <div class="pg-right">
+                        <input type="radio" name="ale" value="True" checked="checked">&ensp;Ale<br>
+                        <input type="radio" name="leo" value="True" checked="checked">&ensp;Leo<br>
+                        <input type="radio" name="sandro" value="True" checked="checked">&ensp;Sandro<br>
+                        <input type="radio" name="siwei" value="True" checked="checked">&ensp;Siwei<br>
+                    </div>
+                </div>
+            </div>
+            <br><hr>
+            <!--        SUBMIT OR RESET     -->
+            <div>
+                <button type="submit" class="btn btn-primary">CERCA</button>
+                <button type="reset" class="btn btn-secondary">RESET</button>
+            </div>
+        </form>
+        <br>
+
+        <div style="text-align: center;">
+            <h1 id="videos-ris"></h1>
+        </div>
+
+        <div id="videos"></div>
+
+        <div id="videos-navigator"></div>
+
+        <script type="text/javascript" lang="javascript" src="script?page=search"></script>
+  </body>
+</html>

@@ -1,2 +1,1 @@
-"# Smash Data" 
-"# smash-data" 
+# Smash Data 

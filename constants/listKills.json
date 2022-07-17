@@ -1,0 +1,23 @@
+[
+    {"code": "sides", "name": "Smash Laterale"},
+    {"code": "ups", "name": "Smash in Su"},
+    {"code": "downs", "name": "Smash in Giù"},
+    {"code": "fair", "name": "Aereo Frontale"},
+    {"code": "bair", "name": "Aereo Posteriore"},
+    {"code": "uair", "name": "Aereo in Su"},
+    {"code": "dair", "name": "Aereo in Giù"},
+    {"code": "nair", "name": "Aereo Standard"},
+    {"code": "neutralb", "name": "Speciale Standard"},
+    {"code": "downb", "name": "Speciale in Giù"},
+    {"code": "upb", "name": "Speciale in Su"},
+    {"code": "sideb", "name": "Speciale Laterale"},
+    {"code": "dash", "name": "In Corsa"},
+    {"code": "met", "name": "Meteora"},
+    {"code": "grab", "name": "Grab"},
+    {"code": "shield", "name": "Scudo Rotto"},
+    {"code": "fa", "name": "Fuoco Amico"},
+    {"code": "foot", "name": "Footstool"},
+    {"code": "sf", "name": "Smash Finale"},
+    {"code": "peculiar", "name": "Peculiare"},
+    {"code": "o", "name": "Altro"}
+]
