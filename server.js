@@ -155,9 +155,9 @@ async function initServer() {
     let [deaths] = await db.query("select tipo, n, chi, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from deaths natural join smash")
 
     app.get('/update_db', async (req,res) => {
-        let [smash] = await db.query("select tipo, n, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from smash")
-        let [kills] = await db.query("select tipo, n, uccide, ucciso, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from kills natural join smash")
-        let [deaths] = await db.query("select tipo, n, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from deaths natural join smash")
+        [smash] = await db.query("select tipo, n, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from smash")
+        [kills] = await db.query("select tipo, n, uccide, ucciso, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from kills natural join smash")
+        [deaths] = await db.query("select tipo, n, chi, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from deaths natural join smash")
         return res.json(smash)
     })
 

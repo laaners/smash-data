@@ -6887,7 +6887,7 @@ insert into kills values ('Single',585,'Sandro','Ale','Aereo in Giù'),
  ('Single',585,'Sandro','Leo','Smash in Su'),
  ('Single',585,'Sandro','Ale','Smash Laterale');
  
-insert into deaths values ('Single',584,'Ale','Palutenas Temple');
+insert into deaths values ('Single',585,'Ale','Palutenas Temple');
 
 
 --Single-584
