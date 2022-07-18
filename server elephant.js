@@ -3,19 +3,135 @@ require('dotenv').config();
 const express = require('express');  
 const http = require('http');
 const cors = require('cors');
-const { Sequelize } =  require("sequelize");
+const fs = require('fs');
+const { Sequelize } =  require("sequelize")
 const db = new Sequelize(process.env.DATABASE_URL, {
 	logging: false,
 	timestamps: false,
-});
-const listKills = require("./constants/listKills.json");
-const listDeaths = require("./constants/listDeaths.json");
-const stage = require("./constants/stage.json");
-const characters = require("./constants/characters.json");
+})
+const listHL = require("./constants/listHL.json")
+const listKills = require("./constants/listKills.json")
+const listDeaths = require("./constants/listDeaths.json")
 
-const app = express(); // Express configuration
+var app = express(); // Express configuration
+
 app.use(cors()); //ajax client al server se http
+
 const port = process.env.PORT || 3000;
+
+const characters = [
+    {"code":"maio","character":"Mario"},
+    {"code":"dong","character":"Donkey Kong"},
+    {"code":"link","character":"Link"},
+    {"code":"saus","character":"Samus"},
+    {"code":"sara","character":"Samus Oscura"},
+    {"code":"yohi","character":"Yoshi"},
+    {"code":"kiby","character":"Kirby", 
+        "peculiar":"Risucchio o Stella"},
+    {"code":"fox","character":"Fox"},
+    {"code":"pihu","character":"Pikachu"},
+    {"code":"lugi","character":"Luigi"},
+    {"code":"ness","character":"Ness", 
+        "peculiar":"PK Rocket"},
+    {"code":"caon","character":"Captain Falcon"},
+    {"code":"jiff","character":"Jigglypuff"},
+    {"code":"pech","character":"Peach"},
+    {"code":"dasy","character":"Daisy"},
+    {"code":"boer","character":"Bowser"},
+    {"code":"icrs","character":"Ice Climbers"},
+    {"code":"shik","character":"Sheik"},
+    {"code":"zeda","character":"Zelda"},
+    {"code":"drio","character":"Dr. Mario"},
+    {"code":"pichu","character":"Pichu"},
+    {"code":"faco","character":"Falco"},
+    {"code":"math","character":"Marth"},
+    {"code":"luna","character":"Lucina"},
+    {"code":"lino","character":"Link Bambino"},
+    {"code":"garf","character":"Ganondorf",
+        "peculiar":"Volcano Kick"},
+    {"code":"mewo","character":"Mewtwo"},
+    {"code":"roy","character":"Roy"},
+    {"code":"chom","character":"Chrom"},
+    {"code":"mrch","character":"Mr. Game & Watch",
+        "peculiar":"Sedia"},
+    {"code":"meht","character":"Meta Knight"},
+    {"code":"pit","character":"Pit"},
+    {"code":"piro","character":"Pit Oscuro"},
+    {"code":"saro","character":"Samus Tuta Zero"},
+    {"code":"waio","character":"Wario",
+        "peculiar": "Moto"},
+    {"code":"snke","character":"Snake"},
+    {"code":"ike","character":"Ike"},
+    {"code":"poer","character":"Pokemon Trainer",
+        "peculiar":"Fuococarica"},
+    {"code":"ding","character":"Diddy Kong",
+        "peculiar":"Monkey Kick"},
+    {"code":"luas","character":"Lucas",
+        "peculiar":"PK Rocket"},
+    {"code":"soic","character":"Sonic"},
+    {"code":"kide","character":"King Dedede"},
+    {"code":"olar","character":"Olimar"},
+    {"code":"luio","character":"Lucario"},
+    {"code":"r.b.","character":"R.O.B.",
+        "peculiar": "Speciale Laterale Riflettore"},
+    {"code":"line","character":"Link Cartone"},
+    {"code":"wolf","character":"Wolf"},
+    {"code":"abte","character":"Abitante",
+        "peculiar": "Ascia"},
+    {"code":"mean","character":"Mega Man"},
+    {"code":"trit","character":"Trainer di Wii Fit"},
+    {"code":"roto","character":"Rosalinda e Sfavillotto"},
+    {"code":"liac","character":"Little Mac",
+        "peculiar":"KO"},
+    {"code":"grja","character":"Greninja",
+        "peculiar":"Idropompa"},
+    {"code":"loii","character":"Lottatore Mii"},
+    {"code":"spii","character":"Spadaccino Mii"},
+    {"code":"fuii","character":"Fuciliere Mii"},
+    {"code":"pana","character":"Palutena",
+        "peculiar":"Vento delle Ali"},
+    {"code":"paan","character":"Pac-Man",
+        "peculiar":"Acqua dell'Idrante"},
+    {"code":"daen","character":"Daraen"},
+    {"code":"shlk","character":"Shulk"},
+    {"code":"boor","character":"Bowser Junior",
+        "peculiar":"Martello in Aria"},
+    {"code":"dunt","character":"Duo Duck Hunt"},
+    {"code":"ryu","character":"Ryu"},
+    {"code":"ken","character":"Ken"},
+    {"code":"clud","character":"Cloud",
+        "peculiar":"Limit"},
+    {"code":"coin","character":"Corrin",
+        "peculiar":"Morso del Drago"},
+    {"code":"bata","character":"Bayonetta"},
+    {"code":"rang","character":"Ragazza Inkling"},
+    {"code":"riey","character":"Ridley"},
+    {"code":"sion","character":"Simon"},
+    {"code":"rier","character":"Richter"},
+    {"code":"kiol","character":"King K. Rool",
+        "peculiar":"Schiaffo"},
+    {"code":"fufi","character":"Fuffi"},
+    {"code":"inar","character":"Incineroar",
+        "peculiar":"Vendetta"},
+    {"code":"piha","character":"Pianta Piranha"},
+    {"code":"joer","character":"Joker",
+        "peculiar":"All-Out Attack"},
+    {"code":"eroe","character":"Eroe",
+        "peculiar":"Morte Istantanea"},
+    {"code":"baie","character":"Banjo e Kazooie"},
+    {"code":"tery","character":"Terry",
+        "peculiar":"GO!"},
+    {"code":"byth","character":"Byleth"},
+    {"code":"miin","character":"Min Min"},
+    {"code":"stve","character":"Steve"},
+    {"code":"seth","character":"Sephiroth",
+        "peculiar":"Supernova Inversione"},
+    {"code":"pyra","character":"Pyra & Mythra"},
+    {"code":"kaya","character":"Kazuya",
+        "peculiar":"Rage Drive"},
+    {"code":"sora","character":"Sora",
+        "peculiar":"Thundaga"}
+];
 
 async function InitDatabaseConnection() {
 	try {
@@ -34,34 +150,14 @@ async function InitDatabaseConnection() {
 //FILE HTML------------------------------------------------------------------------------------------------------------------------------------------------------------------
 async function initServer() {
     await InitDatabaseConnection()
-    let [smash] = await db.query("select tipo, n, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1, url from smash")
+    let [smash] = await db.query("select tipo, n, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from smash")
     let [kills] = await db.query("select tipo, n, uccide, ucciso, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from kills natural join smash")
     let [deaths] = await db.query("select tipo, n, chi, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from deaths natural join smash")
-    let playlist = {
-        entries: smash.map(_=>{
-            return {
-                "title":_.tipo+"-"+_.n,
-                "url":"https://www.youtube.com/watch?v="+_.url,
-                "id":_.url
-            } 
-        })
-    }
-    let listHL = await retrieveHL()
 
     app.get('/update_db', async (req,res) => {
-        [smash] = await db.query("select tipo, n, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1, url from smash");
+        [smash] = await db.query("select tipo, n, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from smash");
         [kills] = await db.query("select tipo, n, uccide, ucciso, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from kills natural join smash");
         [deaths] = await db.query("select tipo, n, chi, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from deaths natural join smash");
-        playlist = {
-            entries: smash.map(_=>{
-                return {
-                    "title":_.tipo+"-"+_.n,
-                    "url":"https://www.youtube.com/watch?v="+_.url,
-                    "id":_.url
-                } 
-            })
-        }
-        listHL = await retrieveHL()
         return res.json(smash);
     })
 
@@ -113,17 +209,20 @@ async function initServer() {
         res.send(listHL);
     });
 
+    //FILE JSON------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     app.get('/playlist', function(req,res) {
-        return res.json(playlist)
+        res.sendFile("playlist.json",{root:__dirname});
     });
 
     app.get('/stage', function(req,res) {
-        return res.json(stage)
+        res.sendFile("stage.json",{root:__dirname});
     });
 
     //FILE PNG E GIF------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     app.get('/pic_pg', function(req,res) { //http://localhost:3000/pic_pg?pg=baie&type=avatar0
+        console.log(req.query);
         if(req.query.pg == undefined || req.query.type == undefined) {
             res.send("Pg or type undefined");
             return;
@@ -253,6 +352,7 @@ async function initServer() {
     });
 
     app.get('/query_player', function(req,res) { //http://localhost:3000/query_player?player=Ale&filter=usage
+        console.log(req.query);
         if(req.query.player == undefined || req.query.filter == undefined) {
             res.send("Player or filter undefined");
             return;
@@ -332,6 +432,7 @@ async function initServer() {
     });
 
     app.get('/query_tier_list', function(req,res) {
+        console.log(req.query);
         //OVERALL TIER LIST-------------------------------------
         if(req.query.player == undefined) {
             let obj = [];
@@ -417,6 +518,7 @@ async function initServer() {
     });
 
     app.get('/query_pg', function(req, res) {
+        console.log(req.query);
         if(req.query.player == undefined || req.query.pg == undefined) {
             res.send("Player or pg undefined");
             return;
@@ -489,6 +591,7 @@ async function initServer() {
     });
 
     app.get('/query_pg_tot', function(req,res) {
+        console.log(req.query);
         if(req.query.pg == undefined) {
             res.send("Pg undefined");
             return;
@@ -566,7 +669,9 @@ async function initServer() {
     });
 
     app.get('/query_video', function(req, res) {
+        console.log(req.query);
         let obj = req.query;
+        let playlist = JSON.parse(fs.readFileSync("playlist.json").toString()).entries;
         let risSmash = smash.filter((item) => {
             let cWin = true;
             if(obj["win"] != "True")
@@ -631,8 +736,12 @@ async function initServer() {
             ris = risSmash.filter(value => risKills.includes(value)).filter(value => risDeaths.includes(value));
         }
 
+        console.log(ris);
+        console.log(ris.length);
+        console.log(req.query);
+
         ris = ris.map((item) => {
-            let video = playlist.entries.find(_=>_.title == item);
+            let video = playlist.find(_=>_.title == item);
             let smashObj = smash.find(_=>(_.tipo+"-"+_.n) == item);
             let newObj = {
                 "title": item,
@@ -646,31 +755,19 @@ async function initServer() {
             return newObj;
         });
 
-        return res.send(ris);
+        console.log(ris);
+        console.log(ris.length);
+        console.log(smash.length);
+        console.log(req.query);
+        res.send(ris);
     });
 
     const httpServer = http.createServer(app);
     httpServer.listen(port, function() { 
-        console.log(`In ascolto sulla porta ${port}`);
+        console.log(`In ascolto sulla portaA ${port}`);
     });
 
     //FUNZIONI E VARIABILI AUSILIARIE------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    async function retrieveHL() {
-        const [dbHL] = await db.query("select * from highlights")
-        const ris = []
-        dbHL.forEach((row) => {
-            const obj = ris.find(_=>_.n === row.n)
-            if(obj === undefined)
-                ris.push({
-                    n: row.n,
-                    [row.tipo]: row.tipo_n
-                })
-            else
-                obj[row.tipo] = row.tipo_n
-        })
-        return ris
-    }
-
     function hlFilter(n) {
         if(n <= 0 || listHL.find(_=>_.n == n) == undefined) 
             return (elem) => true;

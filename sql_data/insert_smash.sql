@@ -333,7 +333,7 @@ insert into smash values('Doubles',283,'Pichu','Falco','Ridley','Olimar','Ale','
 insert into smash values('Doubles',282,'Pichu','Jigglypuff','Daisy','Samus Oscura','Leo','Sandro');
 insert into smash values('Doubles',281,'Ganondorf','Donkey Kong','Sephiroth','Lucas','Leo','Siwei');
 insert into smash values('Doubles',280,'Abitante','Sora','Steve','Spadaccino Mii','Ale','Siwei');
-insert into smash values('Doubles',279,'Abitante','Joker','Pyra & Mythra','Cloud','Leo','Sandro');
+insert into smash values('Doubles',279,'Abitante','Joker','Yoshi','Cloud','Leo','Sandro');
 insert into smash values('Doubles',278,'Abitante','Joker','Pyra & Mythra','Cloud','Ale','Siwei');
 insert into smash values('Doubles',277,'Kirby','Lucina','Yoshi','Cloud','Ale','Siwei');
 insert into smash values('Doubles',276,'Kirby','Lucina','Yoshi','King K. Rool','Leo','Sandro');

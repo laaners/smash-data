@@ -7,6 +7,7 @@ create table smash (
 	siwei varchar(40),
 	win varchar(20),
 	win1 varchar(20),
+	url varchar(20),
 	constraint vincolo_su_numero check (n > 0),
 	constraint pk primary key(tipo,n)
 );
@@ -33,4 +34,10 @@ create table deaths (
 	come varchar(40),
 	constraint vincolo_su_numero_d check (n > 0),
 	constraint fk_d foreign key (tipo,n) references smash(tipo,n)
+);
+
+create table highlights (
+	n int,
+	tipo varchar(20),
+	tipo_n int
 );
