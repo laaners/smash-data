@@ -87,6 +87,7 @@ check (come = 'Autodistruzione' or come = 'Mancato Recupero' or come = 'Fuoco Am
 		or come = 'Princess Peach Castle'
 		or come = 'Mushroom Kingdom U' --(thief)
 		or come = 'Rainbow Cruise'
+		or come = 'Mushroom Kingdom II' --(carpet)
 ------------DONKEY KONG
 		or come = 'Jungle Japes' --(fiume)
 		or come = '75m' --(dk)
@@ -117,6 +118,7 @@ check (come = 'Autodistruzione' or come = 'Mancato Recupero' or come = 'Fuoco Am
 		or come = 'Spear Pillar' --(palkia/dialga)
 		or come = 'Unova Pokemon League' --(reshiram,zekrom...)
 		or come = 'Kalos Pokemon League' --(colonne di fuoco)
+		or come = 'Pokemon Stadium 2' --(tapirulan)
 ------------F-ZERO
 		or come = 'Port Town Aero Dive' --(macchine)
 		or come = 'Big Blue' --(moving, macchine)
@@ -154,6 +156,691 @@ check (come = 'Autodistruzione' or come = 'Mancato Recupero' or come = 'Fuoco Am
 delete from kills;
 delete from deaths;
 
+
+
+--Single-911
+insert into kills values ('Single',911,'Sandro','Siwei','Peculiare'),
+ ('Single',911,'Siwei','Sandro','Smash Laterale'),
+ ('Single',911,'Leo','Ale','Aereo Posteriore'),
+ ('Single',911,'Siwei','Leo','Smash in Su'),
+ ('Single',911,'Siwei','Sandro','Smash Finale'),
+ ('Single',911,'Leo','Siwei','Smash Laterale'),
+ ('Single',911,'Siwei','Ale','Smash in Su'),
+ ('Single',911,'Siwei','Sandro','Smash Laterale'),
+ ('Single',911,'Siwei','Leo','Altro'),
+ ('Single',911,'Ale','Siwei','Smash Finale'),
+ ('Single',911,'Leo','Ale','Altro');
+
+insert into deaths values ('Single',911,'Leo','Mancato Recupero'),
+ ('Single',911,'Ale','Unova Pokemon League');
+
+
+--Single-910
+insert into kills values ('Single',910,'Sandro','Leo','Smash Laterale'),
+ ('Single',910,'Leo','Sandro','Aereo Posteriore'),
+ ('Single',910,'Siwei','Ale','Smash Laterale'),
+ ('Single',910,'Sandro','Siwei','Speciale in Giù'),
+ ('Single',910,'Sandro','Leo','Smash Laterale'),
+ ('Single',910,'Siwei','Sandro','Smash Finale'),
+ ('Single',910,'Sandro','Ale','Smash Finale'),
+ ('Single',910,'Ale','Siwei','Smash Laterale'),
+ ('Single',910,'Sandro','Leo','Smash Laterale'),
+ ('Single',910,'Siwei','Ale','Altro'),
+ ('Single',910,'Siwei','Sandro','Altro');
+
+insert into deaths values ('Single',910,'Ale','Mancato Recupero'),
+ ('Single',910,'Sandro','Autodistruzione');
+
+
+--Single-909
+insert into kills values ('Single',909,'Ale','Siwei','Smash in Su'),
+ ('Single',909,'Leo','Ale','Smash Laterale'),
+ ('Single',909,'Siwei','Sandro','Smash Finale'),
+ ('Single',909,'Siwei','Leo','Smash Laterale'),
+ ('Single',909,'Leo','Siwei','In Corsa'),
+ ('Single',909,'Siwei','Sandro','Smash Finale'),
+ ('Single',909,'Siwei','Ale','Smash Finale'),
+ ('Single',909,'Ale','Leo','Aereo in Su'),
+ ('Single',909,'Ale','Siwei','Smash Finale'),
+ ('Single',909,'Sandro','Leo','Smash Finale'),
+ ('Single',909,'Sandro','Ale','Smash in Su');
+
+
+--Single-908
+insert into kills values ('Single',908,'Sandro','Ale','Smash Laterale'),
+ ('Single',908,'Leo','Siwei','Smash Laterale'),
+ ('Single',908,'Ale','Sandro','Aereo Frontale'),
+ ('Single',908,'Siwei','Leo','Smash Laterale'),
+ ('Single',908,'Siwei','Ale','Smash Finale'),
+ ('Single',908,'Leo','Siwei','Smash Finale'),
+ ('Single',908,'Ale','Leo','Speciale Standard'),
+ ('Single',908,'Ale','Sandro','Smash Finale'),
+ ('Single',908,'Sandro','Siwei','Smash Laterale'),
+ ('Single',908,'Leo','Ale','Peculiare'),
+ ('Single',908,'Leo','Sandro','Smash Finale');
+
+
+--Single-907
+insert into kills values ('Single',907,'Sandro','Ale','Speciale in Giù'),
+ ('Single',907,'Leo','Siwei','Smash Laterale'),
+ ('Single',907,'Ale','Leo','Smash Laterale'),
+ ('Single',907,'Ale','Sandro','Smash Finale'),
+ ('Single',907,'Siwei','Ale','Smash Finale'),
+ ('Single',907,'Leo','Siwei','Speciale in Su'),
+ ('Single',907,'Ale','Leo','Smash Laterale'),
+ ('Single',907,'Siwei','Leo','Smash Laterale'),
+ ('Single',907,'Siwei','Ale','Smash Laterale'),
+ ('Single',907,'Sandro','Siwei','Speciale in Giù');
+
+
+--Single-906
+insert into kills values ('Single',906,'Siwei','Leo','Peculiare'),
+ ('Single',906,'Ale','Siwei','Speciale Laterale'),
+ ('Single',906,'Sandro','Ale','Smash Laterale'),
+ ('Single',906,'Siwei','Sandro','In Corsa'),
+ ('Single',906,'Ale','Leo','Aereo Posteriore'),
+ ('Single',906,'Sandro','Siwei','Smash Finale'),
+ ('Single',906,'Sandro','Ale','Aereo in Su'),
+ ('Single',906,'Sandro','Leo','Aereo Frontale'),
+ ('Single',906,'Ale','Siwei','Speciale Standard'),
+ ('Single',906,'Ale','Sandro','Speciale Standard'),
+ ('Single',906,'Ale','Sandro','Smash Laterale');
+
+
+--Single-905
+insert into kills values ('Single',905,'Siwei','Ale','Peculiare'),
+ ('Single',905,'Leo','Siwei','In Corsa'),
+ ('Single',905,'Ale','Leo','Smash Laterale'),
+ ('Single',905,'Siwei','Sandro','Smash Laterale'),
+ ('Single',905,'Sandro','Siwei','Altro'),
+ ('Single',905,'Leo','Ale','Smash Finale'),
+ ('Single',905,'Leo','Sandro','Smash Finale'),
+ ('Single',905,'Siwei','Leo','Smash Laterale'),
+ ('Single',905,'Sandro','Siwei','Smash Finale'),
+ ('Single',905,'Sandro','Leo','Smash Finale'),
+ ('Single',905,'Ale','Sandro','Speciale Standard');
+
+insert into deaths values ('Single',905,'Siwei','Autodistruzione');
+
+
+--Single-904
+insert into kills values ('Single',904,'Ale','Sandro','Aereo Frontale'),
+ ('Single',904,'Ale','Siwei','Speciale Standard'),
+ ('Single',904,'Leo','Ale','Altro'),
+ ('Single',904,'Siwei','Leo','Smash Finale'),
+ ('Single',904,'Siwei','Sandro','Smash Finale'),
+ ('Single',904,'Ale','Siwei','Altro'),
+ ('Single',904,'Leo','Ale','Smash Laterale'),
+ ('Single',904,'Siwei','Leo','Peculiare'),
+ ('Single',904,'Ale','Sandro','Altro'),
+ ('Single',904,'Leo','Siwei','Smash Laterale'),
+ ('Single',904,'Leo','Ale','Altro');
+
+insert into deaths values ('Single',904,'Ale','Kalos Pokemon League'),
+ ('Single',904,'Siwei','Autodistruzione'),
+ ('Single',904,'Ale','Autodistruzione');
+
+
+--Single-903
+insert into kills values ('Single',903,'Siwei','Leo','Speciale Laterale'),
+ ('Single',903,'Leo','Siwei','Smash Finale'),
+ ('Single',903,'Siwei','Leo','Speciale Laterale'),
+ ('Single',903,'Sandro','Siwei','Altro'),
+ ('Single',903,'Siwei','Ale','Speciale Laterale'),
+ ('Single',903,'Leo','Sandro','Aereo Posteriore'),
+ ('Single',903,'Ale','Sandro','Smash Finale'),
+ ('Single',903,'Siwei','Ale','Smash Finale'),
+ ('Single',903,'Siwei','Leo','Smash Finale'),
+ ('Single',903,'Sandro','Siwei','In Corsa'),
+ ('Single',903,'Ale','Sandro','Speciale in Giù');
+
+insert into deaths values ('Single',903,'Siwei','Autodistruzione');
+
+
+--Single-902
+insert into kills values ('Single',902,'Sandro','Leo','Aereo in Su'),
+ ('Single',902,'Leo','Siwei','Smash Laterale'),
+ ('Single',902,'Leo','Sandro','Smash Laterale'),
+ ('Single',902,'Sandro','Ale','Aereo in Su'),
+ ('Single',902,'Siwei','Sandro','Smash Laterale'),
+ ('Single',902,'Sandro','Siwei','Smash Laterale'),
+ ('Single',902,'Ale','Leo','Smash Finale'),
+ ('Single',902,'Leo','Ale','Smash Laterale'),
+ ('Single',902,'Siwei','Sandro','Smash Laterale'),
+ ('Single',902,'Leo','Siwei','In Corsa'),
+ ('Single',902,'Leo','Ale','Smash Finale');
+
+
+--Single-901
+insert into kills values ('Single',901,'Leo','Siwei','Smash Laterale'),
+ ('Single',901,'Siwei','Leo','Smash in Su'),
+ ('Single',901,'Sandro','Leo','Speciale Standard'),
+ ('Single',901,'Ale','Siwei','Speciale in Giù'),
+ ('Single',901,'Leo','Sandro','Aereo Frontale'),
+ ('Single',901,'Sandro','Ale','In Corsa'),
+ ('Single',901,'Ale','Leo','Smash Finale'),
+ ('Single',901,'Sandro','Ale','Smash Finale'),
+ ('Single',901,'Sandro','Siwei','Altro'),
+ ('Single',901,'Ale','Sandro','Smash in Su'),
+ ('Single',901,'Sandro','Ale','Speciale in Su');
+
+insert into deaths values ('Single',901,'Siwei','Mute City SNES');
+
+
+--Single-900
+insert into kills values ('Single',900,'Sandro','Siwei','Altro'),
+ ('Single',900,'Sandro','Leo','Smash Laterale'),
+ ('Single',900,'Leo','Siwei','Altro'),
+ ('Single',900,'Leo','Ale','Smash Finale'),
+ ('Single',900,'Ale','Sandro','Smash Laterale'),
+ ('Single',900,'Siwei','Sandro','Smash Laterale'),
+ ('Single',900,'Siwei','Ale','Smash in Su'),
+ ('Single',900,'Ale','Siwei','Altro'),
+ ('Single',900,'Leo','Sandro','Aereo in Su'),
+ ('Single',900,'Ale','Leo','Aereo in Su'),
+ ('Single',900,'Leo','Ale','Smash Finale');
+
+insert into deaths values ('Single',900,'Siwei','Mancato Recupero'),
+ ('Single',900,'Siwei','Mancato Recupero');
+
+
+--Single-899
+insert into kills values ('Single',899,'Siwei','Sandro','Smash Laterale'),
+ ('Single',899,'Sandro','Ale','Smash Laterale'),
+ ('Single',899,'Sandro','Siwei','In Corsa'),
+ ('Single',899,'Sandro','Ale','Altro'),
+ ('Single',899,'Sandro','Siwei','Smash Finale'),
+ ('Single',899,'Siwei','Sandro','Smash Laterale'),
+ ('Single',899,'Ale','Leo','Smash Finale'),
+ ('Single',899,'Sandro','Leo','Altro'),
+ ('Single',899,'Leo','Siwei','In Corsa'),
+ ('Single',899,'Leo','Ale','In Corsa'),
+ ('Single',899,'Leo','Sandro','Speciale Laterale');
+
+insert into deaths values ('Single',899,'Ale','Mancato Recupero'),
+ ('Single',899,'Leo','Autodistruzione');
+
+
+--Single-898
+insert into kills values ('Single',898,'Leo','Sandro','Smash Laterale'),
+ ('Single',898,'Ale','Siwei','Grab'),
+ ('Single',898,'Siwei','Leo','Smash Laterale'),
+ ('Single',898,'Siwei','Ale','Smash Laterale'),
+ ('Single',898,'Leo','Siwei','Smash Finale'),
+ ('Single',898,'Siwei','Sandro','Smash Laterale'),
+ ('Single',898,'Siwei','Sandro','Smash in Su'),
+ ('Single',898,'Leo','Siwei','Altro'),
+ ('Single',898,'Leo','Ale','In Corsa'),
+ ('Single',898,'Ale','Leo','Smash Laterale'),
+ ('Single',898,'Leo','Ale','Altro');
+
+insert into deaths values ('Single',898,'Leo','Gamer'),
+ ('Single',898,'Ale','Mancato Recupero');
+
+
+--Single-897
+insert into kills values ('Single',897,'Siwei','Leo','Meteora'),
+ ('Single',897,'Sandro','Siwei','Altro'),
+ ('Single',897,'Leo','Ale','Smash Laterale'),
+ ('Single',897,'Leo','Siwei','Smash Finale'),
+ ('Single',897,'Siwei','Leo','Smash Laterale'),
+ ('Single',897,'Siwei','Sandro','Smash Finale'),
+ ('Single',897,'Siwei','Ale','Smash in Su'),
+ ('Single',897,'Sandro','Leo','Smash Finale'),
+ ('Single',897,'Sandro','Siwei','Altro'),
+ ('Single',897,'Sandro','Ale','Aereo in Giù');
+
+insert into deaths values ('Single',897,'Siwei','Autodistruzione'),
+ ('Single',897,'Siwei','Mancato Recupero');
+
+
+--Single-896
+insert into kills values ('Single',896,'Siwei','Leo','Smash Laterale'),
+ ('Single',896,'Siwei','Sandro','Smash Laterale'),
+ ('Single',896,'Leo','Siwei','Speciale in Su'),
+ ('Single',896,'Sandro','Ale','Smash Laterale'),
+ ('Single',896,'Siwei','Ale','Smash Finale'),
+ ('Single',896,'Leo','Siwei','Speciale in Su'),
+ ('Single',896,'Ale','Sandro','Smash Finale'),
+ ('Single',896,'Siwei','Leo','Smash in Su'),
+ ('Single',896,'Siwei','Ale','Speciale Laterale'),
+ ('Single',896,'Ale','Siwei','Altro'),
+ ('Single',896,'Leo','Sandro','In Corsa');
+
+insert into deaths values ('Single',896,'Siwei','Pirate Ship');
+
+
+--Single-895
+insert into kills values ('Single',895,'Siwei','Ale','Smash in Su'),
+ ('Single',895,'Ale','Siwei','Smash Finale'),
+ ('Single',895,'Leo','Sandro','Smash in Su'),
+ ('Single',895,'Siwei','Leo','Smash Finale'),
+ ('Single',895,'Sandro','Ale','Smash Finale'),
+ ('Single',895,'Sandro','Siwei','Smash Finale'),
+ ('Single',895,'Leo','Sandro','Smash in Su'),
+ ('Single',895,'Sandro','Leo','Smash in Su'),
+ ('Single',895,'Ale','Sandro','Smash Finale'),
+ ('Single',895,'Ale','Siwei','Smash Finale'),
+ ('Single',895,'Ale','Leo','Speciale Standard');
+
+
+--Single-894
+insert into kills values ('Single',894,'Sandro','Siwei','Aereo Frontale'),
+ ('Single',894,'Leo','Sandro','Aereo Frontale'),
+ ('Single',894,'Ale','Leo','Aereo Posteriore'),
+ ('Single',894,'Leo','Ale','Smash Finale'),
+ ('Single',894,'Ale','Siwei','Aereo Posteriore'),
+ ('Single',894,'Siwei','Sandro','Speciale Laterale'),
+ ('Single',894,'Leo','Siwei','Speciale in Giù'),
+ ('Single',894,'Ale','Leo','Speciale Standard'),
+ ('Single',894,'Leo','Sandro','Smash Finale'),
+ ('Single',894,'Leo','Ale','Smash Laterale'),
+ ('Single',894,'Ale','Leo','Speciale Laterale');
+
+
+--Single-893
+insert into kills values ('Single',893,'Siwei','Sandro','Speciale Laterale'),
+ ('Single',893,'Ale','Siwei','Aereo in Su'),
+ ('Single',893,'Leo','Ale','Speciale Standard'),
+ ('Single',893,'Ale','Leo','Smash Finale'),
+ ('Single',893,'Ale','Sandro','Smash Finale'),
+ ('Single',893,'Leo','Siwei','Smash Finale'),
+ ('Single',893,'Leo','Ale','Smash Laterale'),
+ ('Single',893,'Siwei','Sandro','Altro'),
+ ('Single',893,'Siwei','Leo','Smash Finale'),
+ ('Single',893,'Leo','Ale','Smash Finale'),
+ ('Single',893,'Siwei','Leo','Speciale in Giù');
+
+insert into deaths values ('Single',893,'Sandro','Autodistruzione');
+
+
+--Single-892
+insert into kills values ('Single',892,'Siwei','Leo','In Corsa'),
+ ('Single',892,'Sandro','Ale','Altro'),
+ ('Single',892,'Leo','Siwei','Smash Finale'),
+ ('Single',892,'Leo','Sandro','Smash Finale'),
+ ('Single',892,'Sandro','Leo','Smash Finale'),
+ ('Single',892,'Ale','Siwei','Smash Finale'),
+ ('Single',892,'Ale','Sandro','Smash Finale'),
+ ('Single',892,'Leo','Ale','Smash Finale'),
+ ('Single',892,'Siwei','Sandro','Smash Finale'),
+ ('Single',892,'Ale','Leo','Speciale Laterale'),
+ ('Single',892,'Siwei','Ale','In Corsa');
+
+insert into deaths values ('Single',892,'Ale','Autodistruzione');
+
+
+--Single-891
+insert into kills values ('Single',891,'Ale','Sandro','Speciale Standard'),
+ ('Single',891,'Siwei','Leo','Altro'),
+ ('Single',891,'Siwei','Sandro','Smash Finale'),
+ ('Single',891,'Sandro','Siwei','In Corsa'),
+ ('Single',891,'Sandro','Ale','Smash Finale'),
+ ('Single',891,'Ale','Siwei','Smash Finale'),
+ ('Single',891,'Ale','Leo','In Corsa'),
+ ('Single',891,'Leo','Ale','Grab'),
+ ('Single',891,'Siwei','Sandro','Altro'),
+ ('Single',891,'Ale','Siwei','Peculiare'),
+ ('Single',891,'Ale','Leo','In Corsa');
+
+insert into deaths values ('Single',891,'Leo','Autodistruzione'),
+ ('Single',891,'Sandro','Wily Castle');
+
+
+--Single-890
+insert into kills values ('Single',890,'Ale','Siwei','Aereo Standard'),
+ ('Single',890,'Leo','Sandro','Peculiare'),
+ ('Single',890,'Leo','Ale','In Corsa'),
+ ('Single',890,'Siwei','Leo','Smash Finale'),
+ ('Single',890,'Sandro','Siwei','Smash in Su'),
+ ('Single',890,'Ale','Leo','Smash Finale'),
+ ('Single',890,'Leo','Sandro','Peculiare'),
+ ('Single',890,'Ale','Leo','Altro'),
+ ('Single',890,'Siwei','Ale','Smash in Su'),
+ ('Single',890,'Ale','Siwei','Smash Laterale'),
+ ('Single',890,'Ale','Sandro','Altro');
+
+insert into deaths values ('Single',890,'Leo','Autodistruzione'),
+ ('Single',890,'Sandro','Spirit Train');
+
+
+--Single-889
+insert into kills values ('Single',889,'Siwei','Ale','Speciale in Giù'),
+ ('Single',889,'Siwei','Leo','Speciale in Giù'),
+ ('Single',889,'Siwei','Sandro','Speciale in Giù'),
+ ('Single',889,'Ale','Siwei','Altro'),
+ ('Single',889,'Siwei','Sandro','Altro'),
+ ('Single',889,'Siwei','Ale','Speciale in Su'),
+ ('Single',889,'Ale','Sandro','Speciale Laterale'),
+ ('Single',889,'Ale','Siwei','Aereo Standard'),
+ ('Single',889,'Ale','Leo','Altro'),
+ ('Single',889,'Leo','Siwei','Altro'),
+ ('Single',889,'Leo','Ale','Smash Laterale');
+
+insert into deaths values ('Single',889,'Siwei','Norfair'),
+ ('Single',889,'Sandro','Norfair'),
+ ('Single',889,'Leo','Norfair'),
+ ('Single',889,'Siwei','Autodistruzione');
+
+
+--Single-888
+insert into kills values ('Single',888,'Ale','Siwei','Smash Laterale'),
+ ('Single',888,'Ale','Leo','Speciale Laterale'),
+ ('Single',888,'Leo','Ale','Smash Finale'),
+ ('Single',888,'Ale','Sandro','Smash Laterale'),
+ ('Single',888,'Sandro','Siwei','Speciale Laterale'),
+ ('Single',888,'Ale','Leo','Smash Laterale'),
+ ('Single',888,'Siwei','Leo','Altro'),
+ ('Single',888,'Siwei','Ale','Speciale Standard'),
+ ('Single',888,'Ale','Sandro','Speciale Laterale'),
+ ('Single',888,'Ale','Sandro','Altro'),
+ ('Single',888,'Sandro','Ale','Smash Laterale');
+
+insert into deaths values ('Single',888,'Leo','Pokemon Stadium 2');
+
+
+--Single-887
+insert into kills values ('Single',887,'Leo','Sandro','Smash in Su'),
+ ('Single',887,'Sandro','Ale','Smash Finale'),
+ ('Single',887,'Ale','Leo','Aereo Frontale'),
+ ('Single',887,'Leo','Siwei','Aereo Standard'),
+ ('Single',887,'Leo','Ale','Smash Finale'),
+ ('Single',887,'Ale','Sandro','Smash Finale'),
+ ('Single',887,'Sandro','Siwei','Altro'),
+ ('Single',887,'Sandro','Ale','Smash Laterale'),
+ ('Single',887,'Siwei','Leo','Smash Laterale'),
+ ('Single',887,'Leo','Sandro','Smash Finale'),
+ ('Single',887,'Leo','Siwei','Altro');
+
+insert into deaths values ('Single',887,'Siwei','Autodistruzione'),
+ ('Single',887,'Siwei','Autodistruzione');
+
+
+--Single-886
+insert into kills values ('Single',886,'Leo','Siwei','Aereo in Giù'),
+ ('Single',886,'Ale','Sandro','Aereo Frontale'),
+ ('Single',886,'Ale','Leo','Smash Laterale'),
+ ('Single',886,'Sandro','Ale','Smash Finale'),
+ ('Single',886,'Ale','Siwei','Smash Finale'),
+ ('Single',886,'Siwei','Sandro','Smash Finale'),
+ ('Single',886,'Siwei','Ale','Speciale Laterale'),
+ ('Single',886,'Sandro','Siwei','Altro'),
+ ('Single',886,'Sandro','Leo','Smash Finale'),
+ ('Single',886,'Leo','Sandro','Smash Laterale'),
+ ('Single',886,'Ale','Leo','Smash Finale');
+
+insert into deaths values ('Single',886,'Siwei','Mancato Recupero');
+
+
+--Single-885
+insert into kills values ('Single',885,'Leo','Siwei','In Corsa'),
+ ('Single',885,'Siwei','Leo','Smash Laterale'),
+ ('Single',885,'Siwei','Ale','Smash Laterale'),
+ ('Single',885,'Siwei','Sandro','Smash Laterale'),
+ ('Single',885,'Sandro','Leo','Smash Finale'),
+ ('Single',885,'Siwei','Ale','Smash Laterale'),
+ ('Single',885,'Sandro','Siwei','Speciale Laterale'),
+ ('Single',885,'Siwei','Leo','Smash in Su'),
+ ('Single',885,'Ale','Sandro','Aereo Frontale'),
+ ('Single',885,'Ale','Siwei','Smash Finale'),
+ ('Single',885,'Ale','Sandro','Smash Laterale');
+
+
+--Single-884
+insert into kills values ('Single',884,'Sandro','Siwei','Smash Laterale'),
+ ('Single',884,'Sandro','Siwei','Altro'),
+ ('Single',884,'Leo','Sandro','Altro'),
+ ('Single',884,'Sandro','Siwei','Altro'),
+ ('Single',884,'Leo','Ale','Peculiare'),
+ ('Single',884,'Ale','Leo','Smash in Su'),
+ ('Single',884,'Sandro','Ale','Speciale Laterale'),
+ ('Single',884,'Sandro','Leo','Smash Laterale'),
+ ('Single',884,'Ale','Sandro','Smash Laterale'),
+ ('Single',884,'Sandro','Leo','Smash Finale'),
+ ('Single',884,'Sandro','Ale','Speciale Standard');
+
+insert into deaths values ('Single',884,'Siwei','Autodistruzione'),
+ ('Single',884,'Sandro','Mancato Recupero'),
+ ('Single',884,'Siwei','Autodistruzione');
+
+
+--Single-883
+insert into kills values ('Single',883,'Ale','Siwei','Altro'),
+ ('Single',883,'Sandro','Leo','Smash Laterale'),
+ ('Single',883,'Leo','Sandro','Smash Finale'),
+ ('Single',883,'Sandro','Ale','Speciale Standard'),
+ ('Single',883,'Sandro','Siwei','Altro'),
+ ('Single',883,'Sandro','Leo','Smash Finale'),
+ ('Single',883,'Leo','Sandro','Aereo in Su'),
+ ('Single',883,'Siwei','Ale','Smash Laterale'),
+ ('Single',883,'Siwei','Sandro','Smash Laterale'),
+ ('Single',883,'Ale','Siwei','Aereo Posteriore'),
+ ('Single',883,'Ale','Leo','Smash Finale');
+
+insert into deaths values ('Single',883,'Siwei','Mushroom Kingdom U'),
+ ('Single',883,'Siwei','Mancato Recupero');
+
+
+--Single-882
+insert into kills values ('Single',882,'Ale','Siwei','Aereo Frontale'),
+ ('Single',882,'Sandro','Ale','Altro'),
+ ('Single',882,'Siwei','Leo','Smash Finale'),
+ ('Single',882,'Leo','Siwei','Smash Finale'),
+ ('Single',882,'Siwei','Leo','Altro'),
+ ('Single',882,'Sandro','Siwei','Altro'),
+ ('Single',882,'Ale','Sandro','Smash Finale'),
+ ('Single',882,'Sandro','Ale','Smash Laterale'),
+ ('Single',882,'Ale','Leo','Aereo Frontale'),
+ ('Single',882,'Sandro','Ale','Smash Laterale');
+
+insert into deaths values ('Single',882,'Ale','Autodistruzione'),
+ ('Single',882,'Leo','Mancato Recupero'),
+ ('Single',882,'Siwei','Autodistruzione');
+
+
+--Single-881
+insert into kills values ('Single',881,'Siwei','Sandro','Smash Laterale'),
+ ('Single',881,'Ale','Siwei','Altro'),
+ ('Single',881,'Ale','Sandro','Grab'),
+ ('Single',881,'Ale','Leo','Aereo Posteriore'),
+ ('Single',881,'Leo','Ale','Smash Finale'),
+ ('Single',881,'Leo','Siwei','Aereo in Giù'),
+ ('Single',881,'Siwei','Leo','Smash in Su'),
+ ('Single',881,'Siwei','Sandro','Smash Laterale'),
+ ('Single',881,'Siwei','Ale','Altro'),
+ ('Single',881,'Ale','Siwei','Aereo Posteriore'),
+ ('Single',881,'Leo','Ale','Altro');
+
+insert into deaths values ('Single',881,'Siwei','Mancato Recupero'),
+ ('Single',881,'Ale','Mancato Recupero');
+
+
+--Single-880
+insert into kills values ('Single',880,'Ale','Siwei','Smash Laterale'),
+ ('Single',880,'Siwei','Leo','Altro'),
+ ('Single',880,'Leo','Sandro','Speciale Standard'),
+ ('Single',880,'Leo','Sandro','Speciale Standard'),
+ ('Single',880,'Sandro','Ale','Speciale in Giù'),
+ ('Single',880,'Sandro','Siwei','Aereo in Su'),
+ ('Single',880,'Ale','Leo','Speciale in Giù'),
+ ('Single',880,'Leo','Siwei','Speciale Standard'),
+ ('Single',880,'Ale','Sandro','Peculiare'),
+ ('Single',880,'Leo','Ale','Speciale in Su'),
+ ('Single',880,'Leo','Ale','Aereo Frontale');
+
+
+--Single-879
+insert into kills values ('Single',879,'Siwei','Ale','Speciale Laterale'),
+ ('Single',879,'Siwei','Sandro','Altro'),
+ ('Single',879,'Sandro','Siwei','Speciale in Giù'),
+ ('Single',879,'Siwei','Sandro','Smash Finale'),
+ ('Single',879,'Sandro','Leo','Smash in Su'),
+ ('Single',879,'Ale','Siwei','Smash Finale'),
+ ('Single',879,'Leo','Ale','Smash Finale'),
+ ('Single',879,'Leo','Siwei','Aereo in Su'),
+ ('Single',879,'Ale','Leo','Aereo Standard'),
+ ('Single',879,'Leo','Sandro','Aereo in Su'),
+ ('Single',879,'Leo','Ale','Smash Finale');
+
+
+--Single-878
+insert into kills values ('Single',878,'Sandro','Siwei','Speciale Standard'),
+ ('Single',878,'Sandro','Ale','Speciale Standard'),
+ ('Single',878,'Ale','Leo','Speciale in Giù'),
+ ('Single',878,'Siwei','Sandro','Smash Finale'),
+ ('Single',878,'Sandro','Leo','Smash Finale'),
+ ('Single',878,'Sandro','Siwei','Speciale Standard'),
+ ('Single',878,'Leo','Sandro','Altro'),
+ ('Single',878,'Sandro','Ale','Smash in Su'),
+ ('Single',878,'Sandro','Siwei','Aereo in Giù'),
+ ('Single',878,'Ale','Leo','Speciale in Giù'),
+ ('Single',878,'Ale','Sandro','Altro');
+
+insert into deaths values ('Single',878,'Sandro','Autodistruzione'),
+ ('Single',878,'Sandro','Saffron City');
+
+
+--Single-877
+insert into kills values ('Single',877,'Leo','Siwei','Smash Laterale'),
+ ('Single',877,'Leo','Ale','Smash in Su'),
+ ('Single',877,'Sandro','Leo','Smash Laterale'),
+ ('Single',877,'Leo','Siwei','ups'),
+ ('Single',877,'Ale','Sandro','Smash Finale'),
+ ('Single',877,'Siwei','Leo','Speciale Laterale'),
+ ('Single',877,'Ale','Sandro','Smash Laterale'),
+ ('Single',877,'Leo','Ale','Smash in Su'),
+ ('Single',877,'Ale','Leo','Smash Finale'),
+ ('Single',877,'Sandro','Ale','Speciale in Giù'),
+ ('Single',877,'Siwei','Sandro','Speciale Laterale');
+
+
+--Single-876
+insert into kills values ('Single',876,'Siwei','Leo','Smash Laterale'),
+ ('Single',876,'Siwei','Ale','Speciale Laterale'),
+ ('Single',876,'Sandro','Siwei','Smash Finale'),
+ ('Single',876,'Ale','Sandro','Aereo in Su'),
+ ('Single',876,'Leo','Ale','Smash Finale'),
+ ('Single',876,'Ale','Leo','Smash Finale'),
+ ('Single',876,'Siwei','Sandro','Altro'),
+ ('Single',876,'Ale','Siwei','Smash Laterale'),
+ ('Single',876,'Siwei','Sandro','Smash Finale'),
+ ('Single',876,'Siwei','Leo','ups'),
+ ('Single',876,'Siwei','Ale','Altro');
+
+insert into deaths values ('Single',876,'Sandro','Autodistruzione');
+
+
+--Single-875
+insert into kills values ('Single',875,'Leo','Siwei','Smash in Su'),
+ ('Single',875,'Siwei','Sandro','Smash Laterale'),
+ ('Single',875,'Siwei','Leo','Altro'),
+ ('Single',875,'Leo','Ale','Smash in Su'),
+ ('Single',875,'Siwei','Leo','Smash Finale'),
+ ('Single',875,'Ale','Sandro','Aereo in Su'),
+ ('Single',875,'Ale','Siwei','Altro'),
+ ('Single',875,'Ale','Leo','Altro'),
+ ('Single',875,'Siwei','Ale','Smash Laterale'),
+ ('Single',875,'Ale','Sandro','Smash Laterale'),
+ ('Single',875,'Ale','Siwei','Smash Laterale');
+
+insert into deaths values ('Single',875,'Leo','Mancato Recupero'),
+ ('Single',875,'Siwei','Mancato Recupero'),
+ ('Single',875,'Leo','Mancato Recupero');
+
+
+--Single-874
+insert into kills values ('Single',874,'Ale','Sandro','Speciale in Su'),
+ ('Single',874,'Sandro','Ale','Aereo in Su'),
+ ('Single',874,'Sandro','Leo','Smash Finale'),
+ ('Single',874,'Leo','Siwei','Smash Laterale'),
+ ('Single',874,'Leo','Sandro','Smash Finale'),
+ ('Single',874,'Leo','Ale','Smash Finale'),
+ ('Single',874,'Ale','Siwei','Speciale in Su'),
+ ('Single',874,'Sandro','Siwei','Altro'),
+ ('Single',874,'Sandro','Leo','Aereo in Giù'),
+ ('Single',874,'Sandro','Leo','Aereo Frontale'),
+ ('Single',874,'Ale','Sandro','Speciale Laterale');
+
+insert into deaths values ('Single',874,'Siwei','Autodistruzione');
+
+
+--Single-873
+insert into kills values ('Single',873,'Siwei','Sandro','Altro'),
+ ('Single',873,'Siwei','Leo','Speciale Laterale'),
+ ('Single',873,'Leo','Siwei','Smash Laterale'),
+ ('Single',873,'Sandro','Ale','Smash Finale'),
+ ('Single',873,'Siwei','Sandro','Smash Finale'),
+ ('Single',873,'Leo','Siwei','Peculiare'),
+ ('Single',873,'Siwei','Leo','Smash Finale'),
+ ('Single',873,'Leo','Ale','Smash Laterale'),
+ ('Single',873,'Sandro','Siwei','Smash Finale'),
+ ('Single',873,'Leo','Sandro','Smash Laterale'),
+ ('Single',873,'Leo','Ale','Smash Laterale');
+
+
+--Single-872
+insert into kills values ('Single',872,'Siwei','Sandro','In Corsa'),
+ ('Single',872,'Siwei','Leo','Speciale in Su'),
+ ('Single',872,'Siwei','Ale','Speciale in Giù'),
+ ('Single',872,'Leo','Siwei','Smash Laterale'),
+ ('Single',872,'Siwei','Sandro','Speciale in Su'),
+ ('Single',872,'Ale','Siwei','Aereo Posteriore'),
+ ('Single',872,'Sandro','Ale','Speciale Laterale'),
+ ('Single',872,'Siwei','Leo','Speciale Laterale'),
+ ('Single',872,'Sandro','Leo','Smash Finale'),
+ ('Single',872,'Sandro','Siwei','Altro'),
+ ('Single',872,'Ale','Sandro','Speciale in Su');
+
+insert into deaths values ('Single',872,'Siwei','Autodistruzione');
+
+
+--Single-871
+insert into kills values ('Single',871,'Sandro','Siwei','Smash Laterale'),
+ ('Single',871,'Ale','Sandro','Speciale Standard'),
+ ('Single',871,'Sandro','Ale','Speciale Laterale'),
+ ('Single',871,'Sandro','Leo','Altro'),
+ ('Single',871,'Sandro','Siwei','Smash Finale'),
+ ('Single',871,'Leo','Siwei','Smash Finale'),
+ ('Single',871,'Ale','Leo','Smash Laterale'),
+ ('Single',871,'Sandro','Ale','Aereo Posteriore'),
+ ('Single',871,'Ale','Sandro','Aereo Posteriore'),
+ ('Single',871,'Sandro','Leo','Speciale in Giù'),
+ ('Single',871,'Sandro','Ale','Aereo in Su');
+
+insert into deaths values ('Single',871,'Leo','Mancato Recupero');
+
+
+--Single-870
+insert into kills values ('Single',870,'Ale','Sandro','Smash in Su'),
+ ('Single',870,'Siwei','Leo','Peculiare'),
+ ('Single',870,'Sandro','Siwei','In Corsa'),
+ ('Single',870,'Leo','Ale','Altro'),
+ ('Single',870,'Ale','Leo','Speciale Standard'),
+ ('Single',870,'Sandro','Siwei','Speciale Standard'),
+ ('Single',870,'Leo','Sandro','Smash Finale'),
+ ('Single',870,'Sandro','Ale','Smash Laterale'),
+ ('Single',870,'Ale','Leo','Smash Finale'),
+ ('Single',870,'Ale','Siwei','Altro'),
+ ('Single',870,'Ale','Sandro','Smash in Su');
+
+insert into deaths values ('Single',870,'Siwei','Autodistruzione');
+
+
+--Single-869
+insert into kills values ('Single',869,'Sandro','Siwei','Smash Laterale'),
+ ('Single',869,'Ale','Sandro','Altro'),
+ ('Single',869,'Siwei','Leo','Smash Finale'),
+ ('Single',869,'Leo','Siwei','Smash in Su'),
+ ('Single',869,'Siwei','Ale','Smash in Su'),
+ ('Single',869,'Sandro','Leo','Smash Finale'),
+ ('Single',869,'Leo','Sandro','Aereo in Giù'),
+ ('Single',869,'Leo','Siwei','Aereo in Giù'),
+ ('Single',869,'Sandro','Ale','In Corsa'),
+ ('Single',869,'Ale','Sandro','Altro'),
+ ('Single',869,'Ale','Leo','Altro');
+
+insert into deaths values ('Single',869,'Sandro','Mancato Recupero'),
+ ('Single',869,'Sandro','Mancato Recupero');
 
 
 --Doubles-390
