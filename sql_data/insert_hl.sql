@@ -1,3 +1,10 @@
+delete from highlights;
+insert into highlights values (29,'Single',915),
+ (29,'Team',29),
+ (29,'Random Team',28),
+ (29,'Random Single',18),
+ (29,'Doubles',407);
+
 insert into highlights values (28,'Single',868),
  (28,'Team',29),
  (28,'Random Team',28),

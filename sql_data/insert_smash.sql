@@ -12,6 +12,69 @@ commit;
 */
 
 begin;
+insert into smash values('Single',955,'Kirby','Terry','Bowser','Diddy Kong','Ale');
+insert into smash values('Single',954,'Terry','Ike','Bowser','Diddy Kong','Ale');
+insert into smash values('Single',953,'Jigglypuff','Trainer di Wii Fit','Eroe','Min Min','Ale');
+insert into smash values('Single',952,'Jigglypuff','Incineroar','Eroe','Spadaccino Mii','Ale');
+insert into smash values('Single',951,'Jigglypuff','Incineroar','Eroe','Pit','Ale');
+insert into smash values('Single',950,'Pokemon Trainer','Link Cartone','Eroe','Ganondorf','Leo');
+insert into smash values('Single',949,'Fuffi','Steve','Sonic','Little Mac','Ale');
+insert into smash values('Single',948,'Fuffi','Abitante','Sonic','Banjo e Kazooie','Siwei');
+insert into smash values('Single',947,'Kirby','Rosalinda e Sfavillotto','Link Bambino','Eroe','Ale');
+insert into smash values('Single',946,'Sheik','Mewtwo','Greninja','Eroe','Sandro');
+insert into smash values('Single',945,'Pichu','Captain Falcon','Sephiroth','Eroe','Siwei');
+insert into smash values('Single',944,'Pichu','Luigi','Samus','Eroe','Leo');
+insert into smash values('Single',943,'Pichu','Ness','Bowser','Eroe','Siwei');
+insert into smash values('Single',942,'Min Min','Snake','Bowser','Incineroar','Leo');
+insert into smash values('Single',941,'Min Min','Steve','Bowser','Lottatore Mii','Sandro');
+insert into smash values('Single',940,'Min Min','Steve','Bowser','King K. Rool','Ale');
+insert into smash values('Single',939,'Kazuya','Pit Oscuro','Bowser','King K. Rool','Sandro');
+insert into smash values('Single',938,'Kazuya','Mega Man','Sephiroth','Ganondorf','Leo');
+insert into smash values('Single',937,'Kazuya','Snake','Little Mac','Cloud','Ale');
+insert into smash values('Single',936,'Kazuya','Terry','Mr. Game & Watch','Byleth','Leo');
+insert into smash values('Single',935,'Kazuya','Ken','Richter','Ganondorf','Ale');
+insert into smash values('Single',934,'Simon','Wolf','Roy','Bowser Junior','Leo');
+insert into smash values('Single',933,'Sonic','Mega Man','Lucario','Corrin','Ale');
+insert into smash values('Single',932,'Fox','Bayonetta','Little Mac','Ridley','Ale');
+insert into smash values('Single',931,'Ice Climbers','Daraen','Sora','Ken','Leo');
+insert into smash values('Single',930,'Kirby','Ike','Link Cartone','Wario','Ale');
+insert into smash values('Single',929,'Kirby','Zelda','Samus','Chrom','Sandro');
+insert into smash values('Single',928,'Kirby','Fuffi','Pianta Piranha','Link','Ale');
+insert into smash values('Single',927,'Kirby','Donkey Kong','Mr. Game & Watch','Terry','Sandro');
+insert into smash values('Single',926,'Pac-Man','Snake','Mr. Game & Watch','Pichu','Leo');
+insert into smash values('Single',925,'Pac-Man','Palutena','Mr. Game & Watch','Incineroar','Ale');
+insert into smash values('Single',924,'Ryu','Richter','Mr. Game & Watch','Pit Oscuro','Sandro');
+insert into smash values('Single',923,'Dr. Mario','Steve','Sephiroth','King K. Rool','Leo');
+insert into smash values('Single',922,'Pokemon Trainer','Ganondorf','Bowser','Spadaccino Mii','Siwei');
+insert into smash values('Single',921,'Sheik','Pikachu','Bowser','Marth','Ale');
+insert into smash values('Single',920,'Kazuya','Steve','Yoshi','Banjo e Kazooie','Siwei');
+insert into smash values('Single',919,'Kazuya','Steve','Bowser','Ragazza Inkling','Leo');
+insert into smash values('Single',918,'Min Min','Kazuya','Bowser','Spadaccino Mii','Siwei');
+insert into smash values('Single',917,'Min Min','Abitante','Bowser','Cloud','Leo');
+insert into smash values('Single',916,'Kazuya','Terry','Greninja','Cloud','Leo');
+commit;
+
+/*--Highlights-29
+insert into smash values('Doubles',407,'Chrom','Jigglypuff','Pyra & Mythra','Bowser','Ale','Leo');
+insert into smash values('Doubles',406,'Roy','Incineroar','Steve','Pichu','Leo','Sandro');
+insert into smash values('Doubles',405,'Ken','Ragazza Inkling','Luigi','Ryu','Leo','Sandro');
+insert into smash values('Doubles',404,'Palutena','Wario','Bowser','Joker','Ale','Sandro');
+insert into smash values('Doubles',403,'Mario','Olimar','Wolf','Greninja','Ale','Siwei');
+insert into smash values('Doubles',402,'Lucina','Ike','Pit','Rosalinda e Sfavillotto','Sandro','Siwei');
+insert into smash values('Doubles',401,'Lucas','Mr. Game & Watch','Pit Oscuro','Captain Falcon','Ale','Leo');
+insert into smash values('Doubles',400,'Meta Knight','Fox','Pac-Man','Daisy','Ale','Siwei');
+insert into smash values('Doubles',399,'Fuffi','King K. Rool','Mewtwo','Ridley','Ale','Sandro');
+insert into smash values('Doubles',398,'Min Min','Ganondorf','Peach','Banjo e Kazooie','Leo','Siwei');
+insert into smash values('Doubles',397,'Diddy Kong','Marth','Duo Duck Hunt','Sora','Sandro','Siwei');
+insert into smash values('Doubles',396,'Samus','Eroe','Ice Climbers','Snake','Ale','Leo');
+insert into smash values('Doubles',395,'Samus Oscura','Daraen','Sheik','Byleth','Leo','Siwei');
+insert into smash values('Doubles',394,'Link Cartone','Lucario','Richter','Kazuya','Ale','Leo');
+insert into smash values('Doubles',393,'Dr. Mario','Zelda','R.O.B.','Link Cartone','Leo','Siwei');
+insert into smash values('Doubles',392,'Bayonetta','Yoshi','Donkey Kong','Pianta Piranha','Leo','Sandro');
+insert into smash values('Doubles',391,'Mega Man','Trainer di Wii Fit','King Dedede','Kirby','Leo','Siwei');
+insert into smash values('Single',915,'Duo Duck Hunt','Pokemon Trainer','Greninja','Abitante','Sandro');
+insert into smash values('Single',914,'Wolf','Banjo e Kazooie','Sephiroth','Link Cartone','Leo');
+insert into smash values('Single',913,'Mewtwo','Pianta Piranha','Samus Tuta Zero','Diddy Kong','Siwei');
 insert into smash values('Single',912,'Mr. Game & Watch','Terry','Peach','Wario','Sandro');
 insert into smash values('Single',911,'Olimar','Daisy','Eroe','Min Min','Leo');
 insert into smash values('Single',910,'Corrin','Ryu','King Dedede','Zelda','Siwei');
@@ -57,7 +120,7 @@ insert into smash values('Single',871,'Fox','Steve','Greninja','Cloud','Sandro')
 insert into smash values('Single',870,'Fox','Steve','Samus','Cloud','Ale');
 insert into smash values('Single',869,'Pichu','Steve','Byleth','Ridley','Ale');
 commit;
-
+*/
 /*--Highlights-28
 insert into smash values('Doubles',390,'Ice Climbers','Sonic','Joker','Roy','Ale','Sandro');
 insert into smash values('Doubles',389,'Falco','Bowser Junior','Abitante','Daisy','Sandro','Siwei');
