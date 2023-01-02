@@ -144,6 +144,7 @@ check (come = 'Autodistruzione' or come = 'Mancato Recupero' or come = 'Fuoco Am
 		or come = 'Palutenas Temple' --(spike ball)
 		or come = 'Flat Zone X' --(game e watch)
 		or come = 'Garreg Mach Monastery' --(fe, moving)
+		or come = 'Castle Siege' --(fe, moving)
 		or come = 'PictoChat 2' --random bullshit
 		or come = 'Tortimer Island' --water shark
 ------------ALTRO TERZE
@@ -158,6 +159,36 @@ check (come = 'Autodistruzione' or come = 'Mancato Recupero' or come = 'Fuoco Am
 delete from kills;
 delete from deaths;
 
+
+
+--Single-998
+insert into kills values ('Single',998,'Siwei','Leo','Speciale Standard'),
+ ('Single',998,'Leo','Ale','Smash Finale'),
+ ('Single',998,'Leo','Siwei','Smash Laterale'),
+ ('Single',998,'Siwei','Sandro','Smash Laterale'),
+ ('Single',998,'Sandro','Ale','Smash Laterale'),
+ ('Single',998,'Leo','Siwei','Smash in Su'),
+ ('Single',998,'Siwei','Leo','Smash Laterale'),
+ ('Single',998,'Siwei','Sandro','Smash Finale'),
+ ('Single',998,'Siwei','Ale','Smash Finale'),
+ ('Single',998,'Leo','Siwei','Speciale in Su'),
+ ('Single',998,'Sandro','Leo','Speciale in Giù');
+
+
+--Single-997
+insert into kills values ('Single',997,'Sandro','Leo','Smash Laterale'),
+ ('Single',997,'Sandro','Siwei','Smash Laterale'),
+ ('Single',997,'Sandro','Ale','Altro'),
+ ('Single',997,'Leo','Siwei','Smash Finale'),
+ ('Single',997,'Leo','Ale','Smash Finale'),
+ ('Single',997,'Siwei','Sandro','Smash Laterale'),
+ ('Single',997,'Siwei','Leo','Speciale Standard'),
+ ('Single',997,'Sandro','Ale','Peculiare'),
+ ('Single',997,'Siwei','Sandro','Altro'),
+ ('Single',997,'Sandro','Siwei','Speciale in Giù'),
+ ('Single',997,'Sandro','Leo','Altro');
+
+insert into deaths values ('Single',997,'Sandro','Mancato Recupero');
 
 
 --Single-996
@@ -452,7 +483,7 @@ insert into kills values ('Single',979,'Sandro','Siwei','Smash Laterale'),
  ('Single',979,'Sandro','Siwei','Smash in Su'),
  ('Single',979,'Ale','Sandro','Smash Finale');
 
-insert into deaths values ('Single',979,'Leo','sd');
+insert into deaths values ('Single',979,'Leo','Autodistruzione');
 
 
 --Single-978
@@ -1109,7 +1140,7 @@ insert into kills values ('Single',945,'Siwei','Sandro','Altro'),
  ('Single',945,'Ale','Leo','Smash Finale'),
  ('Single',945,'Siwei','Ale','Speciale Standard'),
  ('Single',945,'Leo','Siwei','Speciale Standard'),
- ('Single',945,'Siwei','Leo','');
+ ('Single',945,'Siwei','Leo','In Corsa');
 
 insert into deaths values ('Single',945,'Sandro','Mancato Recupero'),
  ('Single',945,'Ale','Autodistruzione');
@@ -1463,7 +1494,7 @@ insert into kills values ('Single',923,'Ale','Sandro','Smash Laterale'),
  ('Single',923,'Leo','Ale','Smash in Su'),
  ('Single',923,'Ale','Siwei','Altro'),
  ('Single',923,'Leo','Sandro','Smash Finale'),
- ('Single',923,'Sandro','Ale','side-');
+ ('Single',923,'Sandro','Ale','Smash Laterale');
 
 insert into deaths values ('Single',923,'Siwei','Mancato Recupero');
 
@@ -1557,7 +1588,7 @@ insert into kills values ('Single',917,'Siwei','Sandro','Smash Laterale'),
  ('Single',917,'Leo','Ale','Altro'),
  ('Single',917,'Siwei','Ale','Altro'),
  ('Single',917,'Siwei','Leo','Smash in Su'),
- ('Single',917,'Leo','Siwei','sf');
+ ('Single',917,'Leo','Siwei','Smash Finale');
 
 insert into deaths values ('Single',917,'Sandro','Mancato Recupero'),
  ('Single',917,'Siwei','Autodistruzione'),

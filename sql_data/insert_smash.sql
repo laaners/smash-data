@@ -12,6 +12,46 @@ commit;
 */
 
 begin;
+insert into smash values('Single',1034,'Snake','Wolf','Eroe','King Dedede','Leo');
+insert into smash values('Single',1033,'Snake','Lucario','Eroe','Incineroar','Ale');
+insert into smash values('Single',1032,'Pyra & Mythra','Lucina','Pianta Piranha','Donkey Kong','Leo');
+insert into smash values('Single',1031,'Pyra & Mythra','Fuffi','Mr. Game & Watch','Mewtwo','Sandro');
+insert into smash values('Single',1030,'Sonic','Falco','Sephiroth','Byleth','Ale');
+insert into smash values('Single',1029,'Fuciliere Mii','Falco','Sephiroth','Spadaccino Mii','Leo');
+insert into smash values('Single',1028,'Snake','Wolf','Sephiroth','Spadaccino Mii','Ale');
+insert into smash values('Single',1027,'Snake','Falco','Sephiroth','Pit','Siwei');
+insert into smash values('Single',1026,'Snake','Falco','Sephiroth','Diddy Kong','Ale');
+insert into smash values('Single',1025,'Snake','Steve','Sephiroth','Banjo e Kazooie','Siwei');
+insert into smash values('Single',1024,'Snake','Steve','Sephiroth','Greninja','Ale');
+insert into smash values('Single',1023,'Kirby','Steve','Sephiroth','Incineroar','Leo');
+insert into smash values('Single',1022,'Meta Knight','Chrom','Sephiroth','Banjo e Kazooie','Sandro');
+insert into smash values('Single',1021,'Sheik','Marth','Sephiroth','Wolf','Sandro');
+insert into smash values('Single',1020,'King K. Rool','Mega Man','Yoshi','King Dedede','Ale');
+insert into smash values('Single',1019,'Mega Man','Link Cartone','Bowser','King K. Rool','Leo');
+insert into smash values('Single',1018,'Ragazza Inkling','Pit Oscuro','Eroe','Diddy Kong','Ale');
+insert into smash values('Single',1017,'Ken','Ness','Eroe','Donkey Kong','Sandro');
+insert into smash values('Single',1016,'Min Min','Daisy','Eroe','Donkey Kong','Ale');
+insert into smash values('Single',1015,'Jigglypuff','Cloud','Eroe','Duo Duck Hunt','Leo');
+insert into smash values('Single',1014,'Pac-Man','Cloud','Eroe','Duo Duck Hunt','Ale');
+insert into smash values('Single',1013,'Fox','Sephiroth','Eroe','Lucario','Ale');
+insert into smash values('Single',1012,'Ganondorf','Steve','Eroe','Samus Tuta Zero','Sandro');
+insert into smash values('Single',1011,'Ganondorf','Steve','Eroe','Jigglypuff','Leo');
+insert into smash values('Single',1010,'Pichu','Steve','Eroe','Little Mac','Ale');
+insert into smash values('Single',1009,'Pichu','Steve','Eroe','Roy','Siwei');
+insert into smash values('Single',1008,'Kirby','Steve','Eroe','Pokemon Trainer','Ale');
+insert into smash values('Single',1007,'Fox','Steve','Eroe','Captain Falcon','Leo');
+insert into smash values('Single',1006,'Fox','Steve','Eroe','Pit','Leo');
+insert into smash values('Single',1005,'Kirby','Byleth','Eroe','Pit','Siwei');
+insert into smash values('Single',1004,'Kirby','Eroe','Steve','Pikachu','Sandro');
+insert into smash values('Single',1003,'Spadaccino Mii','Ganondorf','Steve','Ridley','Ale');
+insert into smash values('Single',1002,'Ike','Ganondorf','Steve','Sheik','Sandro');
+insert into smash values('Single',1001,'Pyra & Mythra','Kazuya','Greninja','Daisy','Ale');
+insert into smash values('Single',1000,'R.O.B.','Kazuya','Bowser','Shulk','Leo');
+insert into smash values('Single',999,'Pichu','Kazuya','Yoshi','Samus','Ale');
+commit;
+
+/*--Highlights-30
+insert into smash values('Single',998,'Kirby','Pianta Piranha','Eroe','Bowser','Sandro');
 insert into smash values('Single',997,'Kirby','Roy','Eroe','Captain Falcon','Sandro');
 insert into smash values('Single',996,'Kirby','Link Bambino','Eroe','Falco','Ale');
 insert into smash values('Single',995,'Kirby','Samus','Eroe','Abitante','Ale');
@@ -102,7 +142,7 @@ insert into smash values('Single',918,'Min Min','Kazuya','Bowser','Spadaccino Mi
 insert into smash values('Single',917,'Min Min','Abitante','Bowser','Cloud','Leo');
 insert into smash values('Single',916,'Kazuya','Terry','Greninja','Cloud','Leo');
 commit;
-
+*/
 /*--Highlights-29
 insert into smash values('Doubles',407,'Chrom','Jigglypuff','Pyra & Mythra','Bowser','Ale','Leo');
 insert into smash values('Doubles',406,'Roy','Incineroar','Steve','Pichu','Leo','Sandro');
@@ -128,7 +168,7 @@ insert into smash values('Single',912,'Mr. Game & Watch','Terry','Peach','Wario'
 insert into smash values('Single',911,'Olimar','Daisy','Eroe','Min Min','Leo');
 insert into smash values('Single',910,'Corrin','Ryu','King Dedede','Zelda','Siwei');
 insert into smash values('Single',909,'Lucina','Shulk','Pit','R.O.B.','Sandro');
-insert into smash values('Single',908,'Jigglypuff','Cloud','Pikachu','Roy','Siwei');
+insert into smash values('Single',908,'Jigglypuff','Cloud','Pikachu','Roy','Leo');
 insert into smash values('Single',907,'Pit Oscuro','Pyra & Mythra','Fuffi','Rosalinda e Sfavillotto','Sandro');
 insert into smash values('Single',906,'Bowser Junior','Steve','Simon','Little Mac','Ale');
 insert into smash values('Single',905,'Kirby','Ike','Meta Knight','Little Mac','Ale');

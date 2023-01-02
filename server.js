@@ -35,8 +35,8 @@ async function InitDatabaseConnection() {
 async function initServer() {
     await InitDatabaseConnection()
     let [smash] = await db.query("select tipo, n, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1, url from smash")
-    let [kills] = await db.query("select tipo, n, uccide, ucciso, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from kills natural join smash")
-    let [deaths] = await db.query("select tipo, n, chi, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from deaths natural join smash")
+    let [kills] = await db.query("select tipo, n, uccide, ucciso, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from kills natural right join smash")
+    let [deaths] = await db.query("select tipo, n, chi, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from deaths natural right join smash")
     let playlist = {
         entries: smash.map(_=>{
             return {
@@ -50,8 +50,8 @@ async function initServer() {
 
     app.get('/update_db', async (req,res) => {
         [smash] = await db.query("select tipo, n, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1, url from smash");
-        [kills] = await db.query("select tipo, n, uccide, ucciso, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from kills natural join smash");
-        [deaths] = await db.query("select tipo, n, chi, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from deaths natural join smash");
+        [kills] = await db.query("select tipo, n, uccide, ucciso, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from kills natural right join smash");
+        [deaths] = await db.query("select tipo, n, chi, come, ale, leo, sandro, siwei, win, coalesce(win1, 'NULL') as win1 from deaths natural right join smash");
         playlist = {
             entries: smash.map(_=>{
                 return {
